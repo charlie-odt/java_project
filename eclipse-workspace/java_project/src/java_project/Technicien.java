@@ -2,9 +2,10 @@ package java_project;
 
 public class Technicien {
 	// Defines the variables
-	String name;
-	String qualification;
-	boolean available;
+	private int ind;
+	private String name;
+	private String qualification;
+	private boolean available;
 	
 	// Creates a Technician instance
 	public Technicien(String name, String qualification, boolean available) {
@@ -41,6 +42,10 @@ public class Technicien {
 	// Modifies the availability variable
 	void modifiyAvailability(boolean newValue) {
 		this.available = newValue;
+	}
+
+	int getId(){
+		return this.id;
 	}
 	
 	

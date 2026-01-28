@@ -1,9 +1,9 @@
 package java_project;
 
 public class Building {
-	Private int id;
-	Private String name;
-	Private String location;
+	private int id;
+	private String name;
+	private String location;
 	
 	// Creates a Building instance
 	public Building(String name, String location) {

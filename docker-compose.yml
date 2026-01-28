@@ -14,9 +14,6 @@ services:
       - db_data:/var/lib/mysql
       - ./bdd.sql:/docker-entrypoint-initdb.d/bdd.sql
 
-volumes:
-  db_data:
-
 phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: projet_maintenance_pma
@@ -29,3 +26,6 @@ phpmyadmin:
       PMA_PASSWORD: user 
     ports:
       - "8080:80"
+
+volumes:
+  db_data:

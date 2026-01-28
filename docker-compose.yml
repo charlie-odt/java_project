@@ -1,20 +1,22 @@
 version: '3.8'
+
 services:
   db:
     image: mysql:8.0
-    container_name: maintenance_db
+    container_name: projet_maintenance_db
+    restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: maintenance_app
-      MYSQL_USER: user
-      MYSQL_PASSWORD: user
+      MYSQL_USER: etudiant
+      MYSQL_PASSWORD: etudiant
+      MYSQL_ROOT_PASSWORD: root
     ports:
       - "3306:3306"
     volumes:
       - db_data:/var/lib/mysql
       - ./bdd.sql:/docker-entrypoint-initdb.d/bdd.sql
 
-phpmyadmin:
+  phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: projet_maintenance_pma
     restart: always
@@ -22,8 +24,8 @@ phpmyadmin:
       - db
     environment:
       PMA_HOST: db
-      PMA_USER: user 
-      PMA_PASSWORD: user 
+      PMA_USER: etudiant
+      PMA_PASSWORD: etudiant
     ports:
       - "8080:80"
 

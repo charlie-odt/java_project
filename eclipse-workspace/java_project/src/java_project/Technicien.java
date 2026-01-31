@@ -2,7 +2,7 @@ package java_project;
 
 public class Technicien {
 	// Defines the variables
-	private int ind;
+	private int id;
 	private String name;
 	private String qualification;
 	private boolean available;
@@ -36,7 +36,7 @@ public class Technicien {
 
 	// Gets the availability variable
 	String getAvailability() {
-		return this.name;
+		return this.available;
 	}
 	
 	// Modifies the availability variable

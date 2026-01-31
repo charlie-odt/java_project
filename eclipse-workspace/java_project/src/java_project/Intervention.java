@@ -14,7 +14,7 @@ public class Intervention {
     private Building building;
 
     // Constructeur sans ID, pour la création
-    public Intervention(LocalDateTime date, String type, InterventionStatus status, 
+    public Intervention(LocalDateTime date, String type, StatutIntervention status, 
                         String description, Technician technician, Building building) {
         this.date = date;
         this.type = type;
@@ -25,7 +25,7 @@ public class Intervention {
     }
 
     // Constructeur complet avec ID, pour la lecture BDD
-    public Intervention(int id, LocalDateTime date, String type, InterventionStatus status, 
+    public Intervention(int id, LocalDateTime date, String type, StatutIntervention status, 
                         String description, Technician technician, Building building) {
         this(date, type, status, description, technician, building); 
         this.id = id;
@@ -54,10 +54,10 @@ public class Intervention {
 		this.type = type; 
 	}
 
-    public InterventionStatus getStatus() { 
+    public StatutIntervention getStatus() { 
 		return status; 
 	}
-    public void setStatus(InterventionStatus status) { 
+    public void setStatus(StatutIntervention status) { 
 		this.status = status;
 	}
 

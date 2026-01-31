@@ -10,12 +10,12 @@ public class Intervention {
     private String description;
     
     private StatutIntervention status;
-    private Technician technician;
+    private Technicien technician;
     private Building building;
 
     // Constructeur sans ID, pour la création
     public Intervention(LocalDateTime date, String type, StatutIntervention status, 
-                        String description, Technician technician, Building building) {
+                        String description, Technicien technician, Building building) {
         this.date = date;
         this.type = type;
         this.status = status;
@@ -26,7 +26,7 @@ public class Intervention {
 
     // Constructeur complet avec ID, pour la lecture BDD
     public Intervention(int id, LocalDateTime date, String type, StatutIntervention status, 
-                        String description, Technician technician, Building building) {
+                        String description, Technicien technician, Building building) {
         this(date, type, status, description, technician, building); 
         this.id = id;
     }
@@ -68,10 +68,10 @@ public class Intervention {
 		this.description = description; 
 	}
 
-    public Technician getTechnician() { 
+    public Technicien getTechnician() { 
 		return technician;
 	}
-    public void setTechnician(Technician technician) { 
+    public void setTechnician(Technicien technician) { 
 		this.technician = technician; 
 	}
 

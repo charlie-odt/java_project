@@ -7,7 +7,7 @@ public enum StatutIntervention {
 
     private final String label;
 
-    InterventionStatus(String label) {
+    StatutIntervention(String label) {
         this.label = label;
     }
   }

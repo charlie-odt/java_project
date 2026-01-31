@@ -1,4 +1,4 @@
-package java_project
+package java_project;
 
 public enum StatutIntervention {
     PLANIFIEE("Planifiée"),
